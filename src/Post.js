@@ -5,8 +5,8 @@ function Post({ title, summary, content, cover, createdAt,author }) {
     <div className="post">
       <div className="image">
         <img
-          src="https://techcrunch.com/wp-content/uploads/2025/01/GettyImages-2193244774.jpg"
-          alt="ggs"
+          src={'http://localhost:4000/'+cover}
+          alt=""
         ></img>
       </div>
       <div className="texts">
