@@ -1,4 +1,6 @@
-function Post() {
+import { formatISO9075 } from "date-fns";
+
+function Post({ title, summary, content, cover, createdAt,author }) {
   return (
     <div className="post">
       <div className="image">
@@ -8,15 +10,13 @@ function Post() {
         ></img>
       </div>
       <div className="texts">
-        <h2>TikTok goes dark in the US</h2>
+        <h2>{title}</h2>
         <p className="info">
-          <a className="author">Ankit Choudhary</a>
-          <time>19-01-2025 23:55</time>
+          <a className="author">{author.username}</a>
+          <time>{formatISO9075(new Date(createdAt))}</time>
         </p>
         <p className="summary">
-          TikTok users began receiving a message about the ban around 10:30 p.m.
-          Eastern. As of Saturday evening, the app was also no longer available
-          in the Apple or Google Play app stores.
+          {summary}
         </p>
       </div>
     </div>

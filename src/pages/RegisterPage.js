@@ -10,6 +10,7 @@ export default function RegisterPage() {
       body: JSON.stringify({ username, password }),
       headers: { "Content-Type": "application/json" },
     });
+    
     if(response.status === 200){
       alert("Registered successfully");
     } else{
